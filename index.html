@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REALLY MAGAZINE</title>
+
+<style>
+:root {
+  --red: #c6252b;
+  --black: #111111;
+  --white: #f8f7f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  padding: 25px 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--black);
+}
+
+.logo {
+  color: var(--red);
+  font-size: clamp(32px, 5vw, 66px);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+.intro {
+  padding: 10vh 4vw 8vh;
+}
+
+.intro small {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.intro h1 {
+  margin-top: 25px;
+  max-width: 1000px;
+  font-size: clamp(48px, 10vw, 140px);
+  line-height: 0.88;
+  letter-spacing: -0.09em;
+  font-weight: 900;
+}
+
+.intro h1 span {
+  color: var(--red);
+}
+
+.intro p {
+  margin-top: 35px;
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.section-title {
+  margin: 0 4vw;
+  padding: 15px 0;
+  border-top: 1px solid var(--black);
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.story {
+  margin: 0 4vw;
+  padding: 30px 0;
+  border-top: 1px solid #bcbab5;
+  display: grid;
+  grid-template-columns: 80px 1fr 180px;
+  gap: 20px;
+  align-items: start;
+  transition: color 0.2s;
+}
+
+.story:hover {
+  color: var(--red);
+}
+
+.story .number {
+  font-size: 12px;
+}
+
+.story h2 {
+  font-size: clamp(28px, 5vw, 65px);
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.story p {
+  font-size: 11px;
+  text-align: right;
+  line-height: 1.6;
+}
+
+footer {
+  margin-top: 100px;
+  padding: 30px 4vw;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+@media (max-width: 700px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .intro {
+    padding-top: 80px;
+  }
+
+  .story {
+    grid-template-columns: 35px 1fr;
+  }
+
+  .story p {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="logo">REALLY</a>
+  <nav>
+    <a href="#projects">PROJECTS</a>
+    <a href="#issues">ISSUES</a>
+    <a href="#archive">ARCHIVE</a>
+    <a href="#about">ABOUT</a>
+    <a href="#shop">SHOP ↗</a>
+  </nav>
+</header>
+
+<main>
+  <section class="intro">
+    <small>INDEPENDENT STYLE MAGAZINE / KOREA</small>
+    <h1>VERY<br>FAMILIAR,<br><span>VERY</span> STRANGE.</h1>
+    <p>
+      눈앞에 펼쳐진 매우 익숙하고, 아주 낯선 것.
+      익숙한 것을 다시 바라보는 독립 매거진,
+      REALLY MAGAZINE.
+    </p>
+  </section>
+
+  <div class="section-title" id="projects">
+    <span>SELECTED PROJECTS</span>
+    <span>2026 — 2027</span>
+  </div>
+
+  <a class="story" href="#issues">
+    <span class="number">01</span>
+    <h2>ISSUE 01 — THE WAY WE SEE</h2>
+    <p>PRINTED MATTER<br>2026</p>
+  </a>
+
+  <a class="story" href="#archive">
+    <span class="number">02</span>
+    <h2>PEOPLE & THEIR STORIES</h2>
+    <p>CONVERSATION<br>ONGOING</p>
+  </a>
+
+  <a class="story" href="#archive">
+    <span class="number">03</span>
+    <h2>ART / LIFE / STYLE</h2>
+    <p>EDITORIAL<br>ONGOING</p>
+  </a>
+
+  <div class="section-title" id="issues">
+    <span>ABOUT REALLY</span>
+    <span>EST. 2026</span>
+  </div>
+
+  <section class="intro" id="about">
+    <small>A DIFFERENT WAY OF LOOKING</small>
+    <h1>LOOK<br>AGAIN.</h1>
+    <p>
+      REALLY는 문화와 예술, 사람과 일상에 관해
+      진심 어린 시선으로 질문하는 독립 매거진입니다.
+    </p>
+  </section>
+</main>
+
+<footer id="archive">
+  <span>REALLY MAGAZINE © 2026</span>
+  <span>VERY FAMILIAR, VERY STRANGE.</span>
+</footer>
+
+</body>
+</html>
